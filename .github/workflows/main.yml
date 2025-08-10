@@ -17,6 +17,4 @@ jobs:
         run: | 
           ssh-keyscan -H 143.198.147.148 >> ~/.ssh/known_hosts
           git remote add prod banana@143.198.147.148:/var/repo/CSE-135-HW1.git 
-          git config pull.rebase true
-          git pull prod main
-          git push prod main
+          git push --force prod main
