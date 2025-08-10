@@ -2,13 +2,30 @@ const factArray = ["Both my parents earned their Ph.D.s at UCSD.", "I know a few
 const colArray = ["blue", "red", "pink", "green","orange"];
 
 let factIndex = 0
-let colIndex = 0;
+let colVal = 1;
 
 function newFact() {
     const div = document.getElementById("randFact");
     div.innerHTML = factArray[factIndex];
     factIndex = (factIndex + 1) % 6;
 
-    div.style.color = colArray[colIndex];
-    colIndex = (colIndex + 1) % 5;
+    switch(colVal) {
+        case 1:
+            div.style.color = blue;
+            break;
+        case 2:
+            div.style.color = purple;
+            break;
+        case 3:
+            div.style.color = pink;
+            break;
+        case 4:
+            div.style.color = orange;
+            break;
+        case 5:
+            div.style.color = green;
+            break;
+    }
+    colVal = (colVal + 1) % 5; // using 5 colVals so that the color of each fact will be different on next round
+    // singe 5 and 6 are coprime
 }
