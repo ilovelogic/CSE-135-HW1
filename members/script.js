@@ -4,5 +4,5 @@ let cur_index = 0
 function newFact() {
     const div = document.getElementById("randFact");
     div.innerHTML = factArray[cur_index];
-    cur_index = (cur_index + 1) % 5;
+    cur_index = (cur_index + 1) % 6;
 }
