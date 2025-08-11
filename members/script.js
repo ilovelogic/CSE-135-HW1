@@ -2,14 +2,13 @@ const factArray = ["Both my parents earned their Ph.D.s at UCSD.", "I know a few
 const colArray = ["red", "green", "blue", "yellow","orange"]
 let factIndex = 0;
 let colIndex = 0;
-let div = document.getElementById("randFact");
-div.style.color = "pink";
 
 function newFact() {
+    const div = document.getElementById("randFact");
 
     div.innerHTML = factArray[factIndex];
+    div.innerHTML = colArray[colIndex];
     div.style.color = colArray[colIndex];
     factIndex = (factIndex + 1) % 6;
     colIndex = (colIndex + 1) % 5;
-
 }
