@@ -7,8 +7,9 @@ function newFact() {
     div.innerHTML = factArray[factIndex];
     factIndex = (factIndex + 1) % 6;
 
+    div.style.color = pink;
+    
     let colVal = (factIndex * 6) % 5;
-    colVal = 0;
 
     switch(colVal) {
         case 0:
