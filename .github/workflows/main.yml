@@ -15,7 +15,5 @@ jobs:
           ssh-private-key: ${{ secrets.PROD_SSH_KEY }} 
       - name: Push to my server 
         run: | 
-          ssh-keyscan -H 143.198.147.148 >> ~/.ssh/known_hosts
           git remote add prod banana@143.198.147.148:/var/repo/CSE-135-HW1.git 
-          git fetch --unshallow
-          git push --force prod main
+          git push prod main
