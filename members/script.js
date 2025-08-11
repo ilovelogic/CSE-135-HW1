@@ -4,11 +4,10 @@ let factIndex = 0;
 
 function newFact() {
     const div = document.getElementById("randFact");
+    div.style.color = pink;
     div.innerHTML = factArray[factIndex];
     factIndex = (factIndex + 1) % 6;
 
-    div.style.color = pink;
-    
     let colVal = (factIndex * 6) % 5;
 
     switch(colVal) {
