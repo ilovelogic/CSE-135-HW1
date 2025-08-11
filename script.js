@@ -10,10 +10,10 @@ let index = 0;
 
 function getQuote() {
     const quote_div = document.getElementById("quote");
-    quote_div.innerHTML = quoteArray[index];
+    quote_div.innerHTML = '\"' + quoteArray[index] + '\"';
 
     const auth_div = document.getElementById("author");
-    auth_div.innerHTML = authArray[index];
+    auth_div.innerHTML = " - " + authArray[index];
 
-    index++;
+    index = (index + 1) % 6;
 }
