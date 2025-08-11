@@ -10,3 +10,7 @@
         background-color: pink;
         margin: 10px;
 }
+
+.outer {
+	border: 5px solid pink;
+}

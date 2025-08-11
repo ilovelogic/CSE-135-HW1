@@ -2,7 +2,7 @@ h1 {
 	color: green;
 }
 
-
+Alex McClelland
 a:link {
 	color: pink;
 }
@@ -17,14 +17,6 @@ a:hover {
 
 .outer {
 	border: 5px solid green;
-}
-
-.box {
-	width: calc(98%);
-	background-color: pink;
-	color: white;
-	margin: 10px;
-	transform: rotate(0turn);
 }
 
 @media (width >= 0em) {
