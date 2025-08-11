@@ -9,21 +9,19 @@ function newFact() {
 
     let colVal = (factIndex * 6) % 5;
 
-    switch(colVal) {
-        case 0:
-            div.style.color = pink;
-            break;
-        case 1:
-            div.style.color = blue;
-            break;
-        case 2:
-            div.style.color = purple;
-            break;
-        case 3:
-            div.style.color = orange;
-            break;
-        case 4:
-            div.style.color = green;
-            break;
+    if (colVal == 0) {
+        div.style.color = pink;
+    }
+    else if (colVal == 1) {
+        div.style.color = blue;
+    }
+    else if (colVal == 2) {
+        div.style.color = purple;
+    }
+    else if (colVal == 3) {
+        div.style.color = orange;
+    }
+    else {
+        div.style.color = green;
     }
 }
