@@ -5,11 +5,10 @@ let colIndex = 0;
 
 function newFact() {
     const div = document.getElementById("randFact");
-    div.style.color = "green";
 
-    //div.innerHTML = factArray[factIndex];
-    //div.style.color = colArray[colIndex];
-    //factIndex = (factIndex + 1) % 6;
-    //colIndex = (factIndex * 6) % 5;
+    div.innerHTML = factArray[factIndex];
+    div.style.color = colArray[colIndex];
+    factIndex = (factIndex + 1) % 6;
+    colIndex = (colIndex + 1) % 5;
 
 }
