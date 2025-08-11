@@ -10,5 +10,6 @@ function newFact() {
 
     let colIndex = (factIndex * 6) % 5;
     div.style.color = colArray[colIndex];
+    div.style.color = "pink";
 
 }
