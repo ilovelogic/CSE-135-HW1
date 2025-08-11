@@ -2,7 +2,7 @@ const factArray = ["Both my parents earned their Ph.D.s at UCSD.", "I know a few
 const colArray = ["blue", "red", "pink", "green","orange"];
 
 let factIndex = 0
-let colVal = 1;
+let colVal = 0;
 
 function newFact() {
     const div = document.getElementById("randFact");
@@ -10,19 +10,19 @@ function newFact() {
     factIndex = (factIndex + 1) % 6;
 
     switch(colVal) {
-        case 1:
+        case 0:
             div.style.color = blue;
             break;
-        case 2:
+        case 1:
             div.style.color = purple;
             break;
-        case 3:
+        case 2:
             div.style.color = pink;
             break;
-        case 4:
+        case 3:
             div.style.color = orange;
             break;
-        case 5:
+        case 4:
             div.style.color = green;
             break;
     }
