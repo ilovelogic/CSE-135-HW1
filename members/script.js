@@ -8,20 +8,24 @@ function newFact() {
     factIndex = (factIndex + 1) % 6;
 
     let colVal = (factIndex * 6) % 5;
+    colVal = 0;
 
-    if (colVal == 0) {
-        div.style.color = pink;
+    switch(colVal) {
+        case 0:
+            div.style.color = pink;
+            break;
+        case 1:
+            div.style.color = blue;
+            break;
+        case 2:
+            div.style.color = purple;
+            break;
+        case 3:
+            div.style.color = orange;
+            break;
+        case 4:
+            div.style.color = green;
+            break;
     }
-    else if (colVal == 1) {
-        div.style.color = blue;
-    }
-    else if (colVal == 2) {
-        div.style.color = purple;
-    }
-    else if (colVal == 3) {
-        div.style.color = orange;
-    }
-    else {
-        div.style.color = green;
-    }
+
 }
