@@ -1,6 +1,11 @@
 # CSE-135-HW1
 Repo for the CSE 135 first homework web server
 
+## Deflating Content
+I checked my site prior to doing anything and noticed content-encoding was already gzip. I then recognized that the deflate module was enabled, so perhaps it was default? Regardless, I added the line "SetOutputFilter DEFLATE" to my virtual host configuration file in case the default only worked for certain types.
+
+Since there was no pre-encoded version of my website, I am not sure precisely how the encoding affected the content length. That said, [digital.gov webpage](https://digital.gov/guides/mobile-principles/optimize-minify-compression#:~:text=Issue:%20Large%20page%20files%2C%20which,gzip%20compression%20for%20HTTP%20requests.) notes that "Enabling file compression typically saves around 50 to 70 percent of the file size, and may reduce the size of page resources by up to 90 percent."
+
 ## Auto Deployment to Web Server
 On my server, I created a bare repo clone of my GitHub repo. Then I set up a GitHub workflow (located at .github/workflows/main.yml) that pushes from GitHub to the bare repo. When a push occurs, the post-receive hook script runs, which I editted to write all the pushed changes to my site's public_html directory.
 
