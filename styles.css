@@ -13,4 +13,5 @@
 
 .outer {
 	border: 5px solid pink;
+        width: calc(10%);
 }
